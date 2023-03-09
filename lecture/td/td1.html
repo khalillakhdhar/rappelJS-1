@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD1</title>
+</head>
+<body>
+    Nom:<input type="text" name="nom"  id="nom" placeholder="votre nom ici"><br>
+    prenom:<input type="text" name="prenom" id="prenom" placeholder="votre prénom ici"><br>
+    age:<input type="number" name="age" id="age" placeholder="votre age ici"><br>
+    <button onclick="eval()">évaluer</button>
+    <span id="message">bienvenu</span>
+</body>
+<script>
+function eval()
+{
+    // etape 0
+    let nom=document.getElementById("nom").value;
+    let prenom=document.getElementById("prenom").value;
+    let age=document.getElementById("age").value;
+    // étape 1 : traitement
+    console.log(`le nom est ${nom} le prénom est : ${prenom} et l'age est ${age}`);
+    document.getElementById("message").innerHTML+=`<h3> le nom est ${nom} le prénom est : ${prenom} et l'age est ${age}</h3>`;
+}
+
+</script>
+</html>
